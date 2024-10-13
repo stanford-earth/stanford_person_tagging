@@ -1,0 +1,32 @@
+{
+  "name": "stanford_earth/stanford_person_tagging",
+  "description": "Tag Stanford Person nodes based on workgroups.",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/stanford_earth/stanford_person_tagging",
+  "authors": [],
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+      {
+          "type": "composer",
+          "url": "https://packages.drupal.org/8"
+      }
+  ],
+  "require": {
+      "php": ">=8.0",
+      "drupal/ultimate_cron": "^2.0@alpha",
+      "joshfraser/php-name-parser": "dev-master"
+  },
+  "require-dev": {
+      "drupal/entity_reference_revisions": "^1.9"
+  },
+  "config": {
+      "sort-packages": true
+  },
+  "autoload": {
+      "psr-4": {
+          "Drupal\\stanford_person_tagging\\": "./src"
+      }
+  }
+}

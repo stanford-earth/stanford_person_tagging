@@ -1,0 +1,11 @@
+entity.stanford_person_tagging.output:
+  # JSON output of news
+  path: '/tag-persons-from-workgroups'
+  defaults:
+    _controller: '\Drupal\stanford_person_tagging\Controller\StanfordPersonTaggingController::output'
+    _title: 'Stanford Person Tagging'
+  options:
+    no_cache: TRUE
+  requirements:
+    _permission: 'administer site configuration'
+

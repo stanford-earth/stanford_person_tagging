@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains stanford_person_tagging.module.
+ */
+
+use Drupal\stanford_person_tagging\StanfordPersonTagging;
+
+/**
+ * Implements hook_cron().
+ */
+function stanford_person_tagging_cron() {
+  $tagger = new StanfordPersonTagging();
+  $success = ' did not';
+  if ($tagger->tagPersons()) {
+    $success = '';
+  }
+  \Drupal::logger('stanford_person_tagging')
+    ->info('Person tagging@success ran successfully.', ['@group' => $success]);
+}
